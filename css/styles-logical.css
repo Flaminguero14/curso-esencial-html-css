@@ -1,0 +1,283 @@
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-regular.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-italic.otf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold.otf');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold-italic.otf');
+  font-style: italic;
+  font-weight: bold;
+}
+
+:root {
+  font-size: 16px;
+  --white40: white;
+  --white30: white;
+  --white20: #A5A3A5;
+  --white10: #616161;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--white40);
+  background: #251F24;
+  /* font-family: charter; */
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  /* margin-inline: 100px; */
+  /* margin-block: 100px; */
+  /* margin-block-start: 100px; */
+  /* margin-block-end: 100px; */
+}
+
+a {
+  color:var(--white40);
+}
+
+.header {
+}
+
+.header-content {
+  padding-inline: 20px;
+}
+
+header {
+  margin-block-start: 20px;
+  /* --white10: red; */
+  font-size: 14px;
+  color: var(--white10);
+  /* position: absolute; */
+  /* top */
+  /* inset-block-start: 0; */
+  /* bottom */
+  /* inset-block-end: 0; */
+  /* left */
+  /* inset-inline-start: -232px; */
+  /* right */
+  /* inset-inline-end: 0; */
+  /* inline-size: 188px; */
+}
+
+header li {
+  color: var(--white20);
+  margin-block-end: 16px;
+}
+
+header a {
+  color: var(--white20);
+  text-decoration: none;
+}
+
+header a:hover {
+  color:var(--white40);
+}
+
+nav details summary {
+  color: var(--white30);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 40px;
+  margin-block-start: 20px;
+  margin-block-end: 16px;
+  /* font-size: 3.75em; */
+}
+
+h2 {
+  font-size: 2em;
+  margin-block: 40px;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-block: 16px;
+}
+
+hr {
+  margin-block: 40px;
+  border-color: rgba(97,97,97,0.2);
+}
+
+pre {
+  background: #3a3539;
+  padding: 40px;
+  line-height: 24px;
+  overflow: auto;
+  border-radius: 8px;
+}
+
+blockquote  {
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  background: #3a3539;
+  border-radius: 8px;
+  padding: 24px;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+blockquote p {
+  color: var(--white20);
+}
+
+.hero {
+  background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+  /* background-repeat: no-repeat; */
+  /* background-position: left 50px bottom 50px; */
+  /* background-size: cover; */
+  block-size: 50px;
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
+.section-content h3 {
+  counter-increment: titleList;
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal)'. ';
+}
+
+.section-content img {
+  margin-block-start: 40px;
+  max-inline-size: 100%;
+  display: block;
+  /* max-width: 100%; */
+}
+
+/* .section-content h3::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: var(--white20);
+  display: inline-block;
+} */
+
+p {
+  color: var(--white20);
+}
+
+.main {
+
+}
+
+.wrapper {
+    max-inline-size: 902px;
+    /* block-size: 100px; */
+    margin: auto;
+}
+
+.main-content {
+  padding-inline: 16px;
+}
+
+.main hr {
+  display: none;
+}
+
+.slider {
+
+}
+
+.slider-container {
+  display: block;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+}
+
+.video {
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+  text-align: center;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.form input {
+  inline-size: 100%;
+  border: 1px solid white;
+  box-sizing: border-box;
+  background: #251F24;
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  color: var(--white30);
+  font-size: 16px;
+  display: block;
+  margin-block-end: 24px;
+}
+
+.form input::placeholder {
+  color: var(--white20);
+}
+
+.form input[type="submit"] {
+  background: #157EFB;
+  border: none;
+}
+
+@media screen and (min-width: 1366px) { /* Cuando se diseña mobile first se utiliza min-width: para adaptarlo al monitor; */
+  .hero {
+    block-size: 350px;
+  }
+
+  h1 {
+    font-size: 60px;
+    margin-block-start: 64px;
+  }
+
+  .header {
+    position: sticky;
+    inset-block-start: -45px;
+  }
+
+  .header-content {
+    position: relative;
+    inset-block-start: 65px;
+    padding-inline: 0;
+  }
+
+  header {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -232px;
+    inline-size: 188px;
+  }
+}
